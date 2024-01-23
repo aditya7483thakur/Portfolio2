@@ -1,0 +1,151 @@
+.skills-section {
+  /* background-color: #0f3460; */
+  background-color: rgba(0, 0, 0, 0.2);
+  /* background-color: rgba(15, 52, 96, 1); */
+  height: 100%;
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill-box {
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 18rem;
+  border-radius: 15px;
+  margin-top: 1.5rem;
+  margin-bottom: 1.8rem;
+  margin: 1rem;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+
+.skill-box:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.skill-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 95%;
+}
+
+.skill-box img {
+  height: 50%;
+}
+
+.skill-box span {
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+#html {
+  box-shadow: 1px 3px 9px #f97316;
+}
+
+#html:hover {
+  box-shadow: #f97316 0px 16px 36px, #f97316 0px 5px 18px;
+}
+
+#css {
+  box-shadow: 1px 3px 9px #384cff;
+}
+
+#css:hover {
+  box-shadow: #384cff 0px 16px 36px, #384cff 0px 5px 18px;
+}
+
+#javascript {
+  box-shadow: 1px 3px 9px #f9de16;
+}
+
+#javascript:hover {
+  box-shadow: #f9de16 0px 16px 36px, #f9de16 0px 5px 18px;
+}
+
+#bootstrap {
+  box-shadow: 1px 3px 9px #c40aed;
+}
+
+#bootstrap:hover {
+  box-shadow: #c40aed 0px 16px 36px, #c40aed 0px 5px 18px;
+}
+
+#tailwind {
+  box-shadow: 1px 3px 9px #16cff9;
+}
+
+#tailwind:hover {
+  box-shadow: #16cff9 0px 16px 36px, #16cff9 0px 5px 18px;
+}
+
+#nodejs {
+  box-shadow: 1px 3px 9px #22dd09;
+}
+
+#nodejs:hover {
+  box-shadow: #22dd09 0px 16px 36px, #22dd09 0px 5px 18px;
+}
+
+#react {
+  box-shadow: 1px 3px 9px #3d8ef9;
+}
+
+#react:hover {
+  box-shadow: #3d8ef9 0px 16px 36px, #3d8ef9 0px 5px 18px;
+}
+
+#mongodb {
+  box-shadow: 1px 3px 9px #33c905;
+}
+
+#mongodb:hover {
+  box-shadow: #33c905 0px 16px 36px, #33c905 0px 5px 18px;
+}
+
+#python {
+  box-shadow: 1px 3px 9px #e8e407;
+}
+
+#python:hover {
+  box-shadow: #e8e407 0px 16px 36px, #e8e407 0px 5px 18px;
+}
+
+#cpp {
+  box-shadow: 1px 3px 9px #2c59ff;
+}
+
+#cpp:hover {
+  box-shadow: #2c59ff 0px 16px 36px, #2c59ff 0px 5px 18px;
+}
+
+#java {
+  box-shadow: 1px 3px 9px #ec840d;
+}
+
+#java:hover {
+  box-shadow: #ec840d 0px 16px 36px, #ec840d 0px 5px 18px;
+}
+
+#c {
+  box-shadow: 1px 3px 9px #2c59ff;
+}
+
+#c:hover {
+  box-shadow: #2c59ff 0px 16px 36px, #2c59ff 0px 5px 18px;
+}
+
+#davinci {
+  box-shadow: 1px 3px 9px #10fc5f;
+}
+
+#davinci:hover {
+  box-shadow: #10fc5f 0px 16px 36px, #10fc5f 0px 5px 18px;
+}
