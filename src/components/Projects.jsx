@@ -60,7 +60,7 @@ const Projects = () => {
           <hr></hr>
           <div className="row">
             {projectList.map((item) => (
-              <ProjectCart item={item} />
+              <ProjectCart item={item} key={name} />
             ))}
           </div>
         </div>
