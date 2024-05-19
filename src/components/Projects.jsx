@@ -10,6 +10,29 @@ const Projects = () => {
       img1: "projects-img/shopspheree1.png",
       isLiveDemoDisabled: false,
     },
+
+    {
+      name: "Chatting App",
+      sourceCode: "https://github.com/aditya7483thakur/baatkro",
+      LiveDemo: "https://baatkro.vercel.app/",
+      img1: "projects-img/baatkro.png",
+      isLiveDemoDisabled: false,
+    },
+
+    {
+      name: "NPM package",
+      sourceCode: "https://github.com/aditya7483thakur/segmentor",
+      LiveDemo: "https://segmentor.vercel.app",
+      img1: "projects-img/segmentor.png",
+      isLiveDemoDisabled: false,
+    },
+    {
+      name: "AI-Chatbot",
+      sourceCode: "https://github.com/aditya7483thakur/AiChatbot",
+      LiveDemo: "https://ai-chatbot-devwithadi.vercel.app/",
+      img1: "projects-img/aichatbot.png",
+      isLiveDemoDisabled: false,
+    },
     {
       name: "To Do List",
       sourceCode: "https://github.com/aditya7483thakur/ToDo-App-React",

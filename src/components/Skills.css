@@ -1,7 +1,5 @@
 .skills-section {
-  /* background-color: #0f3460; */
   background-color: rgba(0, 0, 0, 0.2);
-  /* background-color: rgba(15, 52, 96, 1); */
   height: 100%;
   padding-top: 4rem;
   display: flex;
@@ -76,6 +74,22 @@
 
 #bootstrap:hover {
   box-shadow: #c40aed 0px 16px 36px, #c40aed 0px 5px 18px;
+}
+
+#typescript {
+  box-shadow: 1px 3px 9px #c40aed;
+}
+
+#typescript:hover {
+  box-shadow: #c40aed 0px 16px 36px, #c40aed 0px 5px 18px;
+}
+
+#nextjs {
+  box-shadow: 1px 3px 9px #22dd09;
+}
+
+#nextjs:hover {
+  box-shadow: #22dd09 0px 16px 36px, #22dd09 0px 5px 18px;
 }
 
 #tailwind {

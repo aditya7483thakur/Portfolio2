@@ -121,7 +121,7 @@ const SideBar = () => {
               <li>
                 <a
                   className="dropdown-item text-black"
-                  href="https://www.instagram.com/aditya7483thakur"
+                  href="https://www.instagram.com/dev.with.adi/"
                   target="/blank"
                 >
                   <FaInstagramSquare className="fs-5" /> Instagram

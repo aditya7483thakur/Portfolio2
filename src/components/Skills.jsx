@@ -57,9 +57,13 @@ const Skills = () => {
             <img src="skills-img/c.png" alt="C" />
             <span>C</span>
           </div>
-          <div className="skill-box" id="davinci">
-            <img src="skills-img/davinci.png" alt="Davinci Resolve" />
-            <span>Davinci Resolve</span>
+          <div className="skill-box" id="nextjs">
+            <img src="skills-img/nextjs.png" alt="nextjs" />
+            <span>Next Js</span>
+          </div>
+          <div className="skill-box" id="typescript">
+            <img src="skills-img/typescript.png" alt="typescript" />
+            <span>TypeScript</span>
           </div>
         </div>
       </div>

@@ -35,7 +35,7 @@ const Resume = () => {
                   <p className="m-0">
                     Maharaja Surajmal Institute of techenology
                   </p>
-                  <p>CGPA - 8.32 (upto 2nd sem)</p>
+                  <p>CGPA - 8.32 (upto 4th sem)</p>
                 </li>
                 <li>
                   <h4 className="ff-jose my-1 text-red">12th Result</h4>
@@ -85,7 +85,7 @@ const Resume = () => {
                   <MdOutlineMail className="zoom-on-hover" />
                 </a>
                 <a
-                  href="https://www.instagram.com/aditya7483thakur"
+                  href="https://www.instagram.com/dev.with.adi/"
                   target="/blank"
                   className="text-white text-decoration-none mx-2"
                 >
