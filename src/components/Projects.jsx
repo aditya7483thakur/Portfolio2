@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import ProjectCart from "./ProjectCard";
 
 const Projects = () => {
+  const [loaded, setLoaded] = useState(false);
+
+  const handleImageLoad = () => {
+    setLoaded(true);
+  };
   const projectList = [
     {
       name: "E-Commerce Website",
@@ -24,6 +29,13 @@ const Projects = () => {
       sourceCode: "https://github.com/aditya7483thakur/segmentor",
       LiveDemo: "https://segmentor.vercel.app",
       img1: "projects-img/segmentor.png",
+      isLiveDemoDisabled: false,
+    },
+    {
+      name: "TrashTalks",
+      sourceCode: "https://github.com/lordsid003/trashtalks",
+      LiveDemo: "https://trashtalks-web.vercel.app/",
+      img1: "projects-img/trashtalks.png",
       isLiveDemoDisabled: false,
     },
     {
@@ -82,10 +94,12 @@ const Projects = () => {
           </div>
           <hr></hr>
           <div className="row">
-            {projectList.map((item) => (
-              <ProjectCart item={item} key={name} />
+            {projectList.map((item, index) => (
+              <ProjectCart item={item} key={index} />
             ))}
           </div>
+
+          {!loaded && <div className="loader">Loading...</div>}
         </div>
       </div>
     </>
