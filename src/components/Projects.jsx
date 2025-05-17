@@ -9,6 +9,13 @@ const Projects = () => {
   };
   const projectList = [
     {
+      name: "AI-Finance platform",
+      sourceCode: "https://github.com/aditya7483thakur/Portfolio2",
+      LiveDemo: "https://budgetly-sandy.vercel.app/",
+      img1: "projects-img/budgetly.png",
+      isLiveDemoDisabled: false,
+    },
+    {
       name: "E-Commerce Website",
       sourceCode: "https://github.com/aditya7483thakur/ShopSphere",
       LiveDemo: "https://shopspheree.vercel.app",
@@ -98,8 +105,6 @@ const Projects = () => {
               <ProjectCart item={item} key={index} />
             ))}
           </div>
-
-          {!loaded && <div className="loader">Loading...</div>}
         </div>
       </div>
     </>
