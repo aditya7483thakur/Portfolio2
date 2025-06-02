@@ -16,6 +16,14 @@ const Projects = () => {
       isLiveDemoDisabled: false,
     },
     {
+      name: "Clynic App",
+      sourceCode: "https://github.com/aditya7483thakur/veersa-hackathon",
+      LiveDemo:
+        "https://drive.google.com/file/d/1NWNnNw4ISclwcjmV1gOxrbfWcS57GY5X/view?usp=drivesdk",
+      img1: "projects-img/clynic.png",
+      isLiveDemoDisabled: false,
+    },
+    {
       name: "E-Commerce Website",
       sourceCode: "https://github.com/aditya7483thakur/ShopSphere",
       LiveDemo: "https://shopspheree.vercel.app",
