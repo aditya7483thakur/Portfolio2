@@ -10,9 +10,16 @@ const Projects = () => {
   const projectList = [
     {
       name: "AI-Finance platform",
-      sourceCode: "https://github.com/aditya7483thakur/Portfolio2",
+      sourceCode: "https://github.com/aditya7483thakur/Ai-finance-platform",
       LiveDemo: "https://budgetly-sandy.vercel.app/",
       img1: "projects-img/budgetly.png",
+      isLiveDemoDisabled: false,
+    },
+    {
+      name: "File Management platform",
+      sourceCode: "https://github.com/aditya7483thakur/dropbuddy",
+      LiveDemo: "https://dropbuddy.vercel.app/",
+      img1: "projects-img/dropbuddy.png",
       isLiveDemoDisabled: false,
     },
     {
