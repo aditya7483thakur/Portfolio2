@@ -1,0 +1,11 @@
+# robots.txt for Aditya Kumar Portfolio
+# https://dev-with-adi.vercel.app/
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://dev-with-adi.vercel.app/sitemap.xml
+
+# Crawl-delay (optional, for politeness)
+Crawl-delay: 1

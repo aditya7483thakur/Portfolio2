@@ -106,23 +106,27 @@ const Projects = () => {
   ];
 
   return (
-    <>
-      <div className="col-10 ms-auto p-4">
-        <div className="p-4 slide-in-top">
-          <div className="row">
-            <div className="col-6">
-              <h2 className="ff-jose fw-bold ls-2">Something I've Built</h2>
-            </div>
-          </div>
-          <hr></hr>
-          <div className="row">
-            {projectList.map((item, index) => (
-              <ProjectCart item={item} key={index} />
-            ))}
+    <section
+      className="col-10 ms-auto p-4"
+      aria-labelledby="projects-heading"
+      role="region"
+    >
+      <div className="p-4 slide-in-top">
+        <div className="row">
+          <div className="col-6">
+            <h1 id="projects-heading" className="ff-jose fw-bold ls-2">
+              Something I've Built
+            </h1>
           </div>
         </div>
+        <hr></hr>
+        <div className="row">
+          {projectList.map((item, index) => (
+            <ProjectCart item={item} key={index} />
+          ))}
+        </div>
       </div>
-    </>
+    </section>
   );
 };
 

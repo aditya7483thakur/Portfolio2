@@ -2,13 +2,19 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="col-10 py-3 d-flex align-items-center about-image ms-auto">
+    <section
+      className="col-10 py-3 d-flex align-items-center about-image ms-auto"
+      aria-labelledby="about-heading"
+      role="region"
+    >
       <div className="container">
         <div className="row">
           {/* Text section */}
           <div className="col-lg-6 col-md-12 col-sm-12 d-flex align-items-center">
             <div>
-              <h1 className="font-big text-red slide-in-top">About Me</h1>
+              <h1 id="about-heading" className="font-big text-red slide-in-top">
+                About Me
+              </h1>
               <hr />
               <p className="slide-in-bottom">
                 ○ Solved over{" "}
@@ -40,12 +46,13 @@ const About = () => {
             <img
               className="img-fluid"
               src="../about.png"
-              alt="Aditya's profile"
+              alt="Aditya Kumar - MERN Stack Developer with 500+ DSA problems solved"
+              loading="lazy"
             />
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

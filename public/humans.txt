@@ -1,0 +1,13 @@
+/* TEAM */
+Developer: Aditya Kumar
+Role: Full Stack Developer
+Location: India
+GitHub: https://github.com/aditya7483thakur
+LinkedIn: https://www.linkedin.com/in/aditya7483
+
+/* SITE */
+Last update: 2026/02/07
+Standards: HTML5, CSS3, JavaScript ES6+
+Framework: React, Vite
+Components: React Router, Bootstrap
+Hosting: Vercel
