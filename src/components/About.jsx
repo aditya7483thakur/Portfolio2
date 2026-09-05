@@ -1,59 +1,27 @@
-import React from "react";
+import { about } from "../content";
 
-const About = () => {
+export default function About() {
   return (
-    <section
-      className="col-10 py-3 d-flex align-items-center about-image ms-auto"
-      aria-labelledby="about-heading"
-      role="region"
-    >
-      <div className="container">
-        <div className="row">
-          {/* Text section */}
-          <div className="col-lg-6 col-md-12 col-sm-12 d-flex align-items-center">
-            <div>
-              <h1 id="about-heading" className="font-big text-red slide-in-top">
-                About Me
-              </h1>
-              <hr />
-              <p className="slide-in-bottom">
-                ○ Solved over{" "}
-                <span className="text-red ls-2">500+ DSA problems</span> to
-                strengthen problem-solving skills.
-              </p>
-              <p className="slide-in-bottom">
-                ○ Experienced{" "}
-                <span className="text-red ls-2">MERN Stack developer</span>{" "}
-                building dynamic, scalable web applications.
-              </p>
-              <p className="slide-in-bottom">
-                ○ Mentor and organizer of{" "}
-                <span className="text-red ls-2">hackathons</span>, guiding peers
-                and fostering innovation.
-              </p>
-              <p className="slide-in-bottom">
-                ○ Serving as{" "}
-                <span className="text-red ls-2">
-                  Head of Development Department
-                </span>
-                , leading projects and development teams.
-              </p>
-            </div>
-          </div>
-
-          {/* Image section */}
-          <div className="col-lg-6 col-md-12 col-sm-12">
-            <img
-              className="img-fluid"
-              src="../about.png"
-              alt="Aditya Kumar - MERN Stack Developer with 500+ DSA problems solved"
-              loading="lazy"
-            />
-          </div>
+    <section className="section reveal" id="about" aria-labelledby="about-heading">
+      <header className="section-head">
+        <p className="mono">06 / About</p>
+        <h2 id="about-heading">The person in the loop</h2>
+      </header>
+      <div className="about-grid">
+        <div className="about-copy">
+          {about.paragraphs.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
         </div>
+        <dl className="facts">
+          {about.facts.map((fact) => (
+            <div key={fact.label}>
+              <dt>{fact.label}</dt>
+              <dd>{fact.value}</dd>
+            </div>
+          ))}
+        </dl>
       </div>
     </section>
   );
-};
-
-export default About;
+}
