@@ -31,62 +31,83 @@ export const hero = {
   primaryCta: { label: "View selected work", href: "#work" },
   secondaryCta: { label: "Resume", href: site.resume, external: true },
   proofs: [
-    { value: "SDE", label: "Real Time Data Services" },
-    { value: "500+", label: "DSA problems solved" },
-    { value: "10+", label: "Hackathons organized / mentored" },
+    { value: "1+ yr", label: "Engineering experience" },
+    { value: "300+", label: "DSA problems" },
+    { value: "15+", label: "Hackathons organized and mentored" },
   ],
 };
 
 export const experience = [
   {
+    current: true,
     org: "Real Time Data Services",
-    role: "Software Engineer",
+    role: "Software Development Engineer I",
     dates: "Apr 2026 — Present",
+    start: "2026-04",
     location: "Gurugram",
     summary:
-      "Building production software on enterprise systems. Work spans web architecture and backend services.",
+      "Building and evolving production infrastructure for a Kubernetes-as-a-Service platform.",
+    stack: ["Kubernetes", "Helm", "Argo CD", "Keycloak"],
     points: [
-      "Contributing to scalable systems used in production — not side projects.",
-      "Working across the stack: interfaces, services, and the seams between them.",
+      "Built automated cluster provisioning and deletion workflows for the Kubernetes-as-a-Service (KaaS) offering using Kubernetes APIs, Helm, and Argo CD.",
+      "Implemented IAM-to-Keycloak synchronization and Kubernetes RBAC, enabling secure OIDC-based authentication and authorization for Hosted Kubernetes clusters.",
+      "Developed automated Kubernetes version upgrade workflows for control planes and worker node groups using Helm and Argo CD with asynchronous rollout monitoring.",
     ],
   },
   {
     org: "Real Time Data Services",
-    role: "SDE Intern",
-    dates: "Aug 2025 — Apr 2026",
+    role: "Software Development Engineer Intern",
+    dates: "Aug 2025 — Mar 2026",
+    start: "2025-08",
+    end: "2026-03",
     location: "Gurugram",
     summary:
-      "Engineering internship on the same team. Converted to a full-time software engineering role.",
+      "Modernized the frontend architecture of a production Kubernetes management platform.",
+    stack: ["Next.js", "Redux Toolkit", "React Query"],
     points: [
-      "Shipped production work alongside the engineering team.",
-      "Moved from intern to Software Engineer after eight months.",
+      "Migrated the Dedicated Kubernetes management module from a legacy Next.js application to a new App Router-based codebase, ensuring feature parity while adapting to the new architecture.",
+      "Replaced Context API and imperative data fetching with Redux Toolkit and React Query, improving state management and scalability.",
+      "Refactored frontend components using custom hooks, service abstractions, and port-adapter (hexagonal) architecture principles, improving maintainability, modularity, and code reuse.",
     ],
   },
   {
     org: "Sasefied",
-    role: "Full Stack Developer",
+    role: "Full Stack Developer Intern",
     dates: "Jul 2024 — Apr 2025",
+    start: "2024-07",
+    end: "2025-04",
     location: "Remote",
     summary:
-      "Startup work across a client supply-chain product and an in-house hiring platform.",
+      "Raised form accuracy, load performance, and upload reliability on the product frontend.",
+    stack: ["React Hook Form", "Zod", "TanStack Query"],
     points: [
-      "Built features for a client supply-chain management product.",
-      "Worked on I Am Ready AI — a mock-interview and hiring platform.",
-      "Implemented caching and lazy loading to improve load performance.",
+      "Built complex forms with 50+ inputs using React Hook Form and Zod, boosting data accuracy by 30%.",
+      "Reduced Largest Contentful Paint (LCP) from 3.6s to 1s using lazy loading.",
+      "Optimized file uploads using controlled batching and limited concurrency, reducing failures by 25%.",
+      "Enhanced data fetching with TanStack Query, cutting redundant API calls by 15% and enhancing load performance.",
     ],
-    stack: ["React", "Node.js"],
+    impact: [
+      { value: "50+", label: "Form inputs" },
+      { value: "30%", label: "Data accuracy" },
+      { value: "3.6s → 1s", label: "LCP" },
+      { value: "25%", label: "Fewer failures" },
+      { value: "15%", label: "Fewer API calls" },
+    ],
   },
   {
+    light: true,
     org: "CLUMOSS",
     role: "Full Stack Developer",
     dates: "May 2024 — Jun 2024",
+    start: "2024-05",
+    end: "2024-06",
     location: "Remote",
     summary: "Short engagement leading a small React team.",
+    stack: ["React", "Git"],
     points: [
       "Led a React project with a team of four.",
       "Finished key tasks 30% early and used Git / pull requests to keep the codebase clean.",
     ],
-    stack: ["React", "Git"],
   },
 ];
 
@@ -94,29 +115,17 @@ export const projects = [
   {
     featured: true,
     name: "Budgetly",
-    kind: "Personal finance platform",
+    kind: "Personal finance",
     problem:
       "Tracking income, expenses, and budgets usually means spreadsheets or apps that stop at data entry.",
     interesting:
-      "The interesting part is the automation: recurring transactions, budget-threshold alerts, scheduled emails, and receipt intake through a model — not just a CRUD table.",
+      "The work is the automation layer — recurrence, threshold alerts, scheduled mail, and model-backed receipt intake — not another CRUD table.",
     details: [
-      "Recurring and one-time transactions with flexible intervals.",
-      "Budget alerts when usage crosses 90%.",
-      "Monthly summary emails with Gemini-generated saving tips.",
-      "Receipt scanning via the Gemini API to prefill expenses.",
-      "Cron jobs handle recurrence and outbound mail.",
+      "Recurring transactions and budget alerts at 90% usage.",
+      "Gemini receipt scanning plus monthly summary emails with saving tips.",
+      "Cron jobs drive recurrence and outbound mail.",
     ],
-    stack: [
-      "React",
-      "Express",
-      "PostgreSQL",
-      "Prisma",
-      "Clerk",
-      "Gemini",
-      "Nodemailer",
-      "Tailwind",
-      "shadcn/ui",
-    ],
+    stack: ["React", "Express", "PostgreSQL", "Prisma", "Gemini", "Clerk"],
     image: "/projects-img/budgetly.png",
     imageAlt:
       "Budgetly landing page and transaction table with filters, categories, and recurring markers",
@@ -125,17 +134,17 @@ export const projects = [
   },
   {
     name: "DropBuddy",
-    kind: "File management platform",
+    kind: "File management",
     problem:
-      "People need a place to upload files, nest folders, and recover from mistakes without a desktop client.",
+      "People need nested folders, uploads, and a trash that actually deletes — without a desktop client.",
     interesting:
-      "Built as a Next.js full-stack app: hierarchical folders, object storage, and trash that deletes from both the database and ImageKit.",
+      "A Next.js full-stack file tree: Clerk auth, ImageKit objects, and trash that removes both the row and the stored file.",
     details: [
-      "Nested folder tree with Clerk authentication.",
-      "Uploads go through ImageKit; trash empties both DB rows and stored objects.",
-      "Drizzle + PostgreSQL for the relational model.",
+      "Hierarchical folders with Clerk authentication.",
+      "Uploads via ImageKit; emptying trash deletes DB rows and objects.",
+      "Relational model on PostgreSQL with Drizzle.",
     ],
-    stack: ["Next.js", "PostgreSQL", "Drizzle", "Clerk", "ImageKit", "Tailwind"],
+    stack: ["Next.js", "PostgreSQL", "Drizzle", "Clerk", "ImageKit"],
     image: "/projects-img/dropbuddy.png",
     imageAlt:
       "DropBuddy file management landing page with categorized document, image, and video counts",
@@ -143,36 +152,18 @@ export const projects = [
     github: "https://github.com/aditya7483thakur/dropbuddy",
   },
   {
-    name: "ShopSphere",
-    kind: "E-commerce",
-    problem:
-      "A storefront still has to get search, cart, and checkout right — the parts shoppers actually notice.",
-    interesting:
-      "Search is Algolia, payments are Stripe, and the cart is treated as a first-class flow rather than a list of products.",
-    details: [
-      "Authenticated shopping with cart management.",
-      "Stripe checkout for payments.",
-      "Algolia InstantSearch for product discovery.",
-    ],
-    stack: ["React", "Stripe", "Algolia", "Vite"],
-    image: "/projects-img/shopspheree1.png",
-    imageAlt: "ShopSphere e-commerce storefront screenshot",
-    live: "https://shopspheree.vercel.app",
-    github: "https://github.com/aditya7483thakur/ShopSphere",
-  },
-  {
     name: "Baatkro",
     kind: "Realtime chat",
     problem:
-      "Messaging apps look simple until presence, persistence, and auth have to live on the same socket.",
+      "Messaging looks simple until auth, rooms, and history have to live on the same socket.",
     interesting:
-      "First deep pass at Socket.IO: JWT sessions, one-to-one rooms, and messages stored so history survives a refresh.",
+      "JWT sessions, one-to-one Socket.IO rooms, and messages stored so a refresh does not wipe the conversation.",
     details: [
       "JWT authentication and profile-image uploads.",
       "Realtime one-to-one chat over Socket.IO.",
       "Conversation history persisted in MongoDB.",
     ],
-    stack: ["React", "Node.js", "Express", "MongoDB", "Socket.IO", "JWT"],
+    stack: ["React", "Node.js", "MongoDB", "Socket.IO", "JWT"],
     image: "/projects-img/baatkro.png",
     imageAlt: "Baatkro chat application interface",
     live: "https://baatkro.vercel.app/",
@@ -196,96 +187,98 @@ export const projects = [
     live: "https://segmentor.vercel.app",
     github: "https://github.com/aditya7483thakur/segmentor",
   },
+  {
+    name: "ShopSphere",
+    kind: "E-commerce",
+    problem:
+      "A storefront still has to get search, cart, and checkout right — the parts shoppers actually notice.",
+    interesting:
+      "Algolia for discovery, Stripe for payment, and the cart treated as a first-class flow.",
+    details: [
+      "Authenticated shopping with cart management.",
+      "Stripe checkout for payments.",
+      "Algolia InstantSearch for product discovery.",
+    ],
+    stack: ["React", "Stripe", "Algolia", "Vite"],
+    image: "/projects-img/shopspheree1.png",
+    imageAlt: "ShopSphere e-commerce storefront with product cards and search",
+    live: "https://shopspheree.vercel.app",
+    github: "https://github.com/aditya7483thakur/ShopSphere",
+  },
 ];
 
 export const stack = [
   {
+    label: "Languages",
+    items: ["Java", "JavaScript", "TypeScript", "SQL"],
+  },
+  {
     label: "Frontend",
-    items: ["React", "Next.js", "React Native", "Tailwind CSS", "shadcn/ui"],
+    items: ["React", "Next.js", "shadcn/ui", "Tailwind CSS"],
   },
   {
     label: "Backend",
-    items: ["Node.js", "Express", "Socket.IO", "JWT"],
+    items: ["Node.js", "NestJS", "Express.js"],
+  },
+  {
+    label: "Infrastructure",
+    items: ["Docker", "Kubernetes"],
   },
   {
     label: "Databases",
-    items: ["PostgreSQL", "MongoDB", "Prisma", "Drizzle"],
+    items: ["PostgreSQL", "MongoDB"],
   },
   {
-    label: "AI",
-    items: ["Google Gemini", "Groq"],
-  },
-  {
-    label: "Cloud / Auth",
-    items: ["Clerk", "ImageKit", "Stripe", "Algolia", "Vercel"],
-  },
-  {
-    label: "Languages",
-    items: ["JavaScript", "TypeScript", "Python", "C++", "Java", "C"],
+    label: "Concepts",
+    items: ["API Design", "System Design", "DSA"],
   },
 ];
 
 export const community = {
-  intro:
-    "Most of my hackathon work is on the other side of the table — running events, mentoring teams, and helping people ship. I have only sat in a few as a participant.",
+  heading: "I run the rooms",
   stats: [
     {
-      value: "10+",
-      label: "Hackathons organized / mentored",
-      note: "Operations, mentoring, and judging — not participation counts.",
-    },
-    {
-      value: "2",
-      label: "Hackathons I built in",
-      note: "Clynic and TrashTalks. I do not treat organizing as competing.",
+      value: "15+",
+      label: "Hackathons organized and mentored",
+      lead: true,
     },
   ],
-  leadership: [
+  body: "A lot of my favorite tech experiences have happened away from my editor — organizing hackathons, mentoring teams, judging projects, handing out trophies, and building things with people. I’ve spent a good amount of time on the other side of the table, helping others turn ideas into working projects and making events happen behind the scenes. These are a few moments from that journey.",
+  photos: [
     {
-      title: "Head of Development, Geek Room",
-      dates: "Feb 2025 — Sep 2025",
-      body: "Ran the development department: roadmaps for juniors, task assignment, regular syncs, and multiple events and hackathons. Previously Deputy Head (Aug 2024–Feb 2025) and member (from Oct 2023).",
+      featured: true,
+      src: "/community/code-kshetra.jpg",
+      alt: "Organizing team at Code Kshetra 2.0, an MLH hackathon at JIMS Rohini",
+      caption: "Code Kshetra 2.0",
+      note: "Organizing team · JIMS Rohini · MLH 2025",
     },
     {
-      title: "Mentor & judge",
-      dates: "Ongoing",
-      body: "Invited to mentor and later judge at Code Veda — reviewing builds, giving feedback, and working with teams under time pressure.",
+      shape: "portrait",
+      src: "/community/geek-room.jpg",
+      alt: "Geek Room members gathered around the T-37 mascot",
+      caption: "Geek Room",
+      note: "Development team",
     },
     {
-      title: "IEEE MSIT — Web team",
-      dates: "Feb 2024 — Present",
-      body: "Built event and chapter websites with the web development team.",
+      shape: "portrait",
+      src: "/community/code-veda.jpg",
+      alt: "Code Veda 2.0 tokens of appreciation, including one for Aditya",
+      caption: "Code Veda 2.0",
+      note: "Judge",
     },
     {
-      title: "GirlScript Summer of Code",
-      dates: "Apr 2024 — Jun 2024",
-      body: "Contributed to 5+ open-source projects: features, fixes, and collaborative review.",
-    },
-  ],
-  built: [
-    {
-      name: "Clynic",
-      context: "Veersa hackathon · team of three",
-      body: "React Native healthcare app: nearby doctors via GeoNear, conflict-free booking, appointment reminders, maps, and an Ask-AI ranking flow (Groq).",
-      links: [
-        {
-          label: "GitHub",
-          href: "https://github.com/aditya7483thakur/veersa-hackathon",
-        },
-        {
-          label: "APK",
-          href: "https://drive.google.com/file/d/1NWNnNw4ISclwcjmV1gOxrbfWcS57GY5X/view?usp=drivesdk",
-        },
-      ],
+      shape: "landscape",
+      src: "/community/working-session.jpg",
+      alt: "Mentoring a team around a conference table with project screens on the wall",
+      caption: "Mentoring",
+      note: "Working with the team",
     },
     {
-      name: "TrashTalks",
-      context: "Hackathon · team project",
-      body: "React Native + Flask app with Groq/Llama personas. I designed and built the public web presence.",
-      links: [
-        { label: "GitHub", href: "https://github.com/lordsid003/trashtalks" },
-        { label: "Site", href: "https://trashtalks-web.vercel.app/" },
-      ],
+      shape: "landscape",
+      src: "/community/event-stage.jpg",
+      alt: "On-stage recognition at a community innovation event",
+      caption: "On stage",
+      note: "Event close",
     },
   ],
 };
@@ -298,9 +291,14 @@ export const about = {
   ],
   facts: [
     { label: "Based", value: "India" },
-    { label: "School", value: "B.Tech CSE, MSIT · 2022–2026" },
-    { label: "Practice", value: "500+ DSA problems" },
+    { label: "College", value: "B.Tech CSE, MSIT · 2022–2026" },
+    { label: "Practice", value: "300+ DSA problems" },
     { label: "Also", value: "Video editing" },
+  ],
+  currently: [
+    { label: "Building", value: "Production backend / infrastructure systems" },
+    { label: "Learning", value: "System design · backend architecture" },
+    { label: "Outside code", value: "Video editing" },
   ],
 };
 

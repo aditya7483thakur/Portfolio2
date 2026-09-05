@@ -1,56 +1,59 @@
 import { community } from "../content";
 
+function Photo({ photo, className = "" }) {
+  return (
+    <figure className={`comm-photo ${className}`.trim()}>
+      <img src={photo.src} alt={photo.alt} loading="lazy" decoding="async" />
+      <figcaption>
+        <b>{photo.caption}</b>
+        <span>{photo.note}</span>
+      </figcaption>
+    </figure>
+  );
+}
+
 export default function Community() {
+  const featured = community.photos.filter((photo) => photo.featured);
+  const portraits = community.photos.filter((photo) => photo.shape === "portrait");
+  const landscapes = community.photos.filter((photo) => photo.shape === "landscape");
+
   return (
     <section className="section reveal" id="community" aria-labelledby="community-heading">
       <header className="section-head">
         <p className="mono">05 / Community</p>
-        <h2 id="community-heading">Mostly the other side of the table</h2>
+        <h2 id="community-heading">{community.heading}</h2>
       </header>
-      <p className="comm-intro">{community.intro}</p>
-      <div className="comm-stats">
+      <div className="comm-shot">
         {community.stats.map((stat) => (
           <div className="stat" key={stat.label}>
             <strong>{stat.value}</strong>
             <b>{stat.label}</b>
-            <p>{stat.note}</p>
           </div>
         ))}
+        <p className="comm-intro">{community.body}</p>
       </div>
-      <div className="comm-cols">
-        <div className="block">
-          <h3>Leadership & mentoring</h3>
-          {community.leadership.map((item) => (
-            <article className="lead-item" key={item.title}>
-              <h4>{item.title}</h4>
-              <time>{item.dates}</time>
-              <p>{item.body}</p>
-            </article>
+      {community.photos?.length ? (
+        <div className="comm-photos">
+          <p className="mono comm-photos-kicker">On the ground</p>
+          {featured.map((photo) => (
+            <Photo key={photo.src} photo={photo} className="is-lead" />
           ))}
+          {portraits.length ? (
+            <div className="comm-photos-grid is-portraits">
+              {portraits.map((photo) => (
+                <Photo key={photo.src} photo={photo} />
+              ))}
+            </div>
+          ) : null}
+          {landscapes.length ? (
+            <div className="comm-photos-grid is-wide">
+              {landscapes.map((photo) => (
+                <Photo key={photo.src} photo={photo} />
+              ))}
+            </div>
+          ) : null}
         </div>
-        <div className="block">
-          <h3>Hackathons I participated in</h3>
-          {community.built.map((item) => (
-            <article className="build-item" key={item.name}>
-              <h4>{item.name}</h4>
-              <span className="ctx">{item.context}</span>
-              <p>{item.body}</p>
-              <div className="build-links">
-                {item.links.map((link) => (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {link.label}
-                  </a>
-                ))}
-              </div>
-            </article>
-          ))}
-        </div>
-      </div>
+      ) : null}
     </section>
   );
 }

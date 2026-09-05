@@ -5,6 +5,16 @@ export function useActiveSection(ids) {
 
   useEffect(() => {
     const update = () => {
+      const lastId = ids[ids.length - 1];
+      const scrolledToEnd =
+        window.scrollY + window.innerHeight >=
+        document.documentElement.scrollHeight - 32;
+
+      if (scrolledToEnd && lastId) {
+        setActive(lastId);
+        return;
+      }
+
       const line = Math.min(window.innerHeight * 0.22, 180);
       let current = ids[0];
 

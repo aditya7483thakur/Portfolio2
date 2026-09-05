@@ -13,14 +13,27 @@ export default function About() {
             <p key={paragraph}>{paragraph}</p>
           ))}
         </div>
-        <dl className="facts">
-          {about.facts.map((fact) => (
-            <div key={fact.label}>
-              <dt>{fact.label}</dt>
-              <dd>{fact.value}</dd>
-            </div>
-          ))}
-        </dl>
+        <div className="about-side">
+          <dl className="facts">
+            {about.facts.map((fact) => (
+              <div key={fact.label}>
+                <dt>{fact.label}</dt>
+                <dd>{fact.value}</dd>
+              </div>
+            ))}
+          </dl>
+          <div className="currently">
+            <p className="mono">Currently</p>
+            <dl>
+              {about.currently.map((item) => (
+                <div key={item.label}>
+                  <dt>{item.label}</dt>
+                  <dd>{item.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </div>
       </div>
     </section>
   );
