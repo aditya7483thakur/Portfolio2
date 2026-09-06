@@ -32,7 +32,7 @@ export const hero = {
   secondaryCta: { label: "Resume", href: site.resume, external: true },
   proofs: [
     { value: "1+ yr", label: "Engineering experience" },
-    { value: "300+", label: "DSA problems" },
+    { value: "500+", label: "DSA problems" },
     { value: "15+", label: "Hackathons organized and mentored" },
   ],
 };
