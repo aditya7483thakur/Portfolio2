@@ -292,7 +292,7 @@ export const about = {
   facts: [
     { label: "Based", value: "India" },
     { label: "College", value: "B.Tech CSE, MSIT · 2022–2026" },
-    { label: "Practice", value: "300+ DSA problems" },
+    { label: "Practice", value: "500+ DSA problems" },
     { label: "Also", value: "Video editing" },
   ],
   currently: [
